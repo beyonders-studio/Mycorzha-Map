@@ -63,7 +63,7 @@ fn import_archive(base_dir: PathBuf, archive: Vec<u8>) -> Result<ImportSummary, 
             continue;
         }
 
-        let Some(path) = entry.enclosed_name().map(Path::to_path_buf) else {
+        let Some(path) = entry.enclosed_name() else {
             continue;
         };
 
